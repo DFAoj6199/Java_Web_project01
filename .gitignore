@@ -1,0 +1,32 @@
+# ---------- Java 编译产物 ----------
+*.class
+target/
+out/
+build/
+*.jar
+*.war
+!**/.mvn/wrapper/maven-wrapper.jar
+hs_err_pid*
+replay_pid*
+
+# ---------- IDEA ----------
+.idea/
+*.iml
+*.iws
+*.ipr
+# 如果你决定提交 .idea，就删掉上面第 2 行，只保留这些：
+# !.idea/
+# .idea/workspace.xml
+# .idea/shelf/
+
+# ---------- 本地配置（里面有密码，绝不能提交）----------
+application-local.yml
+application-local.properties
+*.local
+
+# ---------- 日志和临时文件 ----------
+logs/
+*.log
+*.tmp
+.DS_Store
+Thumbs.db

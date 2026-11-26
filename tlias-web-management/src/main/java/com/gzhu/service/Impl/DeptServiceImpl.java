@@ -21,4 +21,9 @@ public class DeptServiceImpl implements DeptService {
     public List<Dept> findAll() {
         return deptMapper.findAll();
     }
+
+    @Override
+    public void deleteByID(Integer id) {
+        deptMapper.deleteByID(id);
+    }
 }

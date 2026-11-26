@@ -1,10 +1,7 @@
 package com.gzhu.mapper;
 
 import com.gzhu.pojo.Dept;
-import org.apache.ibatis.annotations.Mapper;
-import org.apache.ibatis.annotations.Result;
-import org.apache.ibatis.annotations.Results;
-import org.apache.ibatis.annotations.Select;
+import org.apache.ibatis.annotations.*;
 
 import java.util.List;
 
@@ -25,4 +22,7 @@ public interface DeptMapper {
     // mybatis.configuration.map-underscore-to-camel-case: true
     @Select("select id, name, create_time, update_time from dept order by update_time desc")
     public List<Dept> findAll();
+
+    @Delete("delete from dept where id = #{id}")
+    void deleteByID(Integer id);
 }
